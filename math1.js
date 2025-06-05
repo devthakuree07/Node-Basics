@@ -1,5 +1,5 @@
-const a = 25;
-const b = 10;
+function add(a , b){
+    return a+b;
+}
 
-console.log(a * b);
-console.log(a + b);
+module.exports = { add };
