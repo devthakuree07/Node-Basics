@@ -3,6 +3,13 @@ const app = express();
 
 app.use(express.json());
 
+// Custom middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next(); // Go to the next middleware or route
+});
+
+
 app.get('/', (req, res) => {
     return res.json("Welcome");
 });
